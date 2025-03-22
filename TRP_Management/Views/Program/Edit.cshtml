@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+
+
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" value="@Model.ProgramId" name="ProgramId" />
+    </div>
+    <input type="text" value="@Model.ProgramName" placeholder="ProgramName" name="ProgramName" class="form-control" />
+    <input type="text" value="@Model.TRPScore" placeholder="TRPScore" name="TRPScore" class="form-control" />
+
+    <input type="text" value="@Model.ChannelId" placeholder="ChannelId" name="ChannelId" class="form-control" />
+    <input type="text" value="@Model.AirTime" placeholder="AirTime" name="AirTime" class="form-control" />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/program/list" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,41 @@
+﻿@model TRP_Management.DTOs.ProgramDTO
+
+@{
+    ViewBag.Title = "Create";
+    var userName = ViewBag.UName as string; // Retrieve UName from ViewBag
+}
+
+<h2>Create</h2>
+
+
+
+
+<form method="post">
+    <input type="text" placeholder="ProgramId" name="ProgramId" class="form-control" />
+    <p class="text-danger">@Html.ValidationMessage("ProgramId")</p>
+    <input type="text" placeholder="ProgramName" name="ProgramName" class="form-control" />
+    <p class="text-danger">@Html.ValidationMessage("ProgramName")</p>
+
+  
+    <div class="form-group mb-3">
+        <label for="TRPScore" class="form-label">TRP Score:</label>
+        @if (Session["user"] is TRP_Management.EF.User user && user.Role == "admin")
+        {
+            @Html.TextBoxFor(model => model.TRPScore, new { @class = "form-control", placeholder = "Enter TRP Score" })
+            @Html.ValidationMessageFor(model => model.TRPScore, "", new { @class = "text-danger" })
+        }
+        else
+        {
+            <p class="form-control-plaintext">TRP Score can only be managed by admins.</p>
+        }
+    </div>
+       
+    <input type="text" placeholder="ChannelId" name="ChannelId" class="form-control" />
+    <p class="text-danger">@Html.ValidationMessage("ChannelId")</p>
+    <input type="text" placeholder="AirTime" name="AirTime" class="form-control" />
+    <p class="text-danger">@Html.ValidationMessage("AirTime")</p>
+
+
+
+    <input type="submit" value="Create" class="btn btn-success" />
+</form>

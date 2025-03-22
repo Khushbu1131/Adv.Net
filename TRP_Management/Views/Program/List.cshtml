@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+
+
+<a href="/program/create">Create</a>
+<form method="get" action="/program/list" class="form-inline mb-3">
+    <div class="form-group mx-sm-3">
+        <input type="text" name="searchTerm" class="form-control"
+               placeholder="Search by Name or TRP" value="@Request.QueryString["searchTerm"]" />
+    </div>
+    <div class="form-group mx-sm-3">
+        <select name="filterChannel" class="form-control">
+            <option value="">-- Filter by Channel --</option>
+            @foreach (var channel in (List<SelectListItem>)ViewBag.Channels)
+            {
+                <option value="@channel.Value" @(channel.Value == Request.QueryString["filterChannel"] ? "selected" : "")>
+                    @channel.Text
+                </option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<table class="table table-bordered">
+    <tr>
+        <th>ProgramId</th>
+        <th>ProgramName</th>
+        <th>TRPScore</th>
+        <th>ChannelId</th>
+        <th>AirTime</th>
+
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.ProgramId</td>
+            <td>@d.ProgramName</td>
+            <td>@d.TRPScore</td>
+            <td>@d.ChannelId</td>
+            <td>@d.AirTime</td>
+
+            <td>
+                <a href="/program/details/@d.ProgramId" class="btn btn-info">Details</a>
+                <a href="/program/edit/@d.ProgramId" class="btn btn-warning">Edit</a>
+                <a href="/program/delete/@d.ProgramId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
