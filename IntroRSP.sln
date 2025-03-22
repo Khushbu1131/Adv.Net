@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroRSP", "IntroRSP\IntroRSP.csproj", "{A3655D26-0F12-4A2F-94FD-BCA3B411CC57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{0863D65F-C9BB-4503-8F82-DA452DC1112C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{85CE07DF-0D0B-458E-903A-2E5A3E8A8127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3655D26-0F12-4A2F-94FD-BCA3B411CC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3655D26-0F12-4A2F-94FD-BCA3B411CC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3655D26-0F12-4A2F-94FD-BCA3B411CC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3655D26-0F12-4A2F-94FD-BCA3B411CC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0863D65F-C9BB-4503-8F82-DA452DC1112C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0863D65F-C9BB-4503-8F82-DA452DC1112C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0863D65F-C9BB-4503-8F82-DA452DC1112C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0863D65F-C9BB-4503-8F82-DA452DC1112C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85CE07DF-0D0B-458E-903A-2E5A3E8A8127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85CE07DF-0D0B-458E-903A-2E5A3E8A8127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85CE07DF-0D0B-458E-903A-2E5A3E8A8127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85CE07DF-0D0B-458E-903A-2E5A3E8A8127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84CAA1A2-E9E1-4D10-9E72-92B0ADD5AC14}
+	EndGlobalSection
+EndGlobal
